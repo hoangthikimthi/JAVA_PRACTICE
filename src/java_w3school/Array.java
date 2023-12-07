@@ -6,10 +6,56 @@ import java.util.Collections;
 public class Array {
 
 	public static void main(String[] args) {
-		BT_16_remove_dupplicate_value_string();
+		BT_18_second_smallest_element();
 	}
 
-	public static void BT_16_remove_dupplicate_value_string() {
+	public static void BT_20_convertToArrayList() {
+		String[] my_array = new String[] { "Python", "JAVA", "PHP", "Perl", "C#", "C++" };
+		Arrays.asList(my_array);
+
+	}
+
+	public static void BT_18_second_smallest_element() {
+		int[] my_array = { -1, -1, 1, 1, 4, 5, 6 };
+
+		// Print the original numeric array.
+		System.out.println("Original numeric array : " + Arrays.toString(my_array));
+
+		// Sort the array to find the second largest value.
+		Arrays.sort(my_array);
+		System.out.println("Original numeric array : " + Arrays.toString(my_array));
+		// Initialize an index to the last element's index.
+		int index = 0;
+
+		while (my_array[index] == my_array[0]) {
+			index++;
+		}
+		// Print the second largest value found.
+		System.out.println("Second largest value: " + my_array[index]);
+
+	}
+
+	public static void BT_17_second_largest_element() {
+		int[] my_array = { 1, 2, 4, 5, 5 };
+
+		// Print the original numeric array.
+		System.out.println("Original numeric array : " + Arrays.toString(my_array));
+
+		// Sort the array to find the second largest value.
+		Arrays.sort(my_array);
+		System.out.println("Original numeric array : " + Arrays.toString(my_array));
+		// Initialize an index to the last element's index.
+		int index = my_array.length - 1;
+
+		while (my_array[index] == my_array[my_array.length - 1]) {
+			index--;
+		}
+		// Print the second largest value found.
+		System.out.println("Second largest value: " + my_array[index]);
+
+	}
+
+	public static void BT_16_remove_dupplicate_value() {
 		// Declare and initialize an integer array 'my_array1'.
 		int[] my_array = { 0, 3, -2, 4, 3, 2 };
 		int no_unique_elements = my_array.length;
