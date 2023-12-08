@@ -18,7 +18,7 @@ public class delete_array {
 		for (int i = 0; i < n; i++)
 			System.out.print(arr[i] + " ");
 		int x = 6;
-		n =	delete(arr, n, x);
+		n = delete(arr, n, x);
 		System.out.print("\nSau khi xoa : ");
 		for (int i = 0; i < n; i++)
 			System.out.print(arr[i] + " ");

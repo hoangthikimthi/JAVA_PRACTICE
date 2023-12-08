@@ -1,12 +1,87 @@
 package java_w3school;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.List;
 
 public class Array {
 
 	public static void main(String[] args) {
-		BT_18_second_smallest_element();
+		BT_28_Max_Min();
+	}
+
+	public static void BT_28_Max_Min() {
+		int[] thi = { 5, 7, 2, 4, 9 };
+		int max = thi[0];
+		int min = thi[0];
+		for (int i = 1; i < thi.length; i++) {
+			if (thi[i] >= max) {
+				max = thi[i];
+			} else if (thi[i] <= min) {
+				min = thi[i];
+			}
+		}
+
+		System.out.println(max + "and" + min);
+	}
+
+	public static void BT_24_Missing_Array() {
+		int[] thi = { 1, 2, 3, 4 };
+		int[] linh = { 1, 2, 3, 4 };
+		boolean equal = true;
+		if (thi.length == linh.length) {
+			for (int i = 0; i < linh.length; i++) {
+				if (thi[i] != linh[i]) {
+					equal = false;
+					System.out.println("notEqual");
+				} else {
+					System.out.println("equal");
+				}
+			}
+			System.out.println("notEqual");
+		} else {
+			System.out.println("equal");
+		}
+	}
+
+	public static void BT_23_equal_array() {
+		int[] thi = { 1, 2, 3, 4 };
+		int[] linh = { 1, 2, 3, 4 };
+		boolean equal = true;
+		if (thi.length == linh.length) {
+			for (int i = 0; i < linh.length; i++) {
+				if (thi[i] != linh[i]) {
+					equal = false;
+					System.out.println("notEqual");
+				} else {
+					System.out.println("equal");
+				}
+			}
+			System.out.println("notEqual");
+		} else {
+			System.out.println("equal");
+		}
+	}
+
+	public static void BT_22_pairs_sum() {
+		int[] inputArray = { 2, 7, 4, -5, 11, 5, 20 };
+		int inputNumber = 15;
+		for (int i = 0; i < inputArray.length; i++) {
+			for (int j = i + 1; j < inputArray.length; j++) {
+				if (inputArray[i] + inputArray[j] == inputNumber) {
+					System.out.println(inputArray[i] + " + " + inputArray[j] + " = " + inputNumber);
+				}
+			}
+		}
+	}
+
+	public static void BT_21_convertToArray() {
+		List<String> list = new ArrayList<String>();
+		list.add("thi");
+		list.add("hoa");
+		list.add("mai");
+		String[] arraylist = new String[3];
+		list.toArray(arraylist);
 	}
 
 	public static void BT_20_convertToArrayList() {

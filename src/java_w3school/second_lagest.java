@@ -4,33 +4,22 @@ import java.util.Arrays;
 
 public class second_lagest {
 	public static void main(String[] args) {
-		// Create an integer array with numeric values.
-		// Create an integer array with numeric values.
-		int[] my_array = { -1, 4, 0, 2, 7, -3 };
 
-		// Print the original numeric array.
-		System.out.println("Original numeric array : " + Arrays.toString(my_array));
+		// Declare and initialize an integer array 'my_array1'.
+		int[] my_array1 = { 1, 2, 3, 4, 5 };
 
-		// Initialize variables to find the minimum and second minimum values.
-		int min = Integer.MAX_VALUE;
-		int second_min = Integer.MAX_VALUE;
+		// Print the original array using Arrays.toString() method.
+		System.out.println("Original array : " + Arrays.toString(my_array1));
 
-		// Iterate through the array to find the second lowest number.
-		for (int i = 0; i < my_array.length; i++) {
-			if (my_array[i] == min) {
-				// If the current element equals the minimum, update the second minimum.
-				second_min = min;
-			} else if (my_array[i] < min) {
-				// If the current element is less than the minimum, update both minimum and second minimum.
-				second_min = min;
-				min = my_array[i];
-			} else if (my_array[i] < second_min) {
-				// If the current element is less than the second minimum, update the second minimum.
-				second_min = my_array[i];
-			}
+		// Iterate through the first half of the array and reverse its elements.
+		for (int i = 0; i < my_array1.length / 2; i++) {
+			// Swap the elements at positions 'i' and 'length - i - 1'.
+			int temp = my_array1[i];
+			my_array1[i] = my_array1[my_array1.length - i - 1];
+			my_array1[my_array1.length - i - 1] = temp;
 		}
 
-		// Print the second lowest number found.
-		System.out.println("Second lowest number is : " + second_min);
+		// Print the reversed array using Arrays.toString() method.
+		System.out.println("Reverse array : " + Arrays.toString(my_array1));
 	}
 }
